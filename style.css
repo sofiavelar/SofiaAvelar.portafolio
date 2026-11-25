@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background: #f6f4f4;
+    color: #25232a;
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+}
+
+/* MENÚ SUPERIOR */
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    background: #b9bfd5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(50,50,50,.15);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    text-decoration: none;
+    color: #25232a;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #25232a;
+    font-size: 13px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.navbar nav a:hover {
+    color: #e68ca8;
+}
+
+/* PANTALLAS */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 100px 10% 60px;
+    background: #b9bfd5;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page:nth-of-type(even) {
+    background: #c0c5d9;
+}
+
+/* HOME */
+
+.home-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.home-text {
+    max-width: 480px;
+}
+
+.home-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(30px, 4vw, 55px);
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.home-text p {
+    font-size: 20px;
+    max-width: 400px;
+    line-height: 1.4;
+}
+
+.home-content > img {
+    width: min(36vw, 440px);
+    height: min(65vh, 550px);
+    object-fit: cover;
+}
+
+/* TITULOS */
+
+.section-title {
+    background: #edcbd5;
+    width: fit-content;
+    min-width: 260px;
+    padding: 12px 25px;
+    font-size: 21px;
+    margin-bottom: 30px;
+}
+
+/* ABOUT ME */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 10%;
+}
+
+.about-description p {
+    font-size: 21px;
+    line-height: 1.45;
+    max-width: 500px;
+    margin-bottom: 25px;
+}
+
+.about-description img {
+    width: min(100%, 400px);
+    height: 280px;
+    object-fit: cover;
+}
+
+.skills h2 {
+    background: #edcbd5;
+    padding: 12px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.skills-list span {
+    font-size: 20px;
+    border-bottom: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+/* PROJECTS */
+
+.projects {
+    justify-content: flex-start;
+}
+
+.projects-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: #e5e5ed;
+    padding: 12px;
+    transition: transform .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-card > img {
+    width: 100%;
+    height: 45vh;
+    object-fit: cover;
+}
+
+.project-footer {
+    padding: 15px 5px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.project-footer span {
+    font-size: 17px;
+}
+
+.project-footer a {
+    font-size: 15px;
+    color: #25232a;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    white-space: nowrap;
+}
+
+/* EXPERIENCES */
+
+.experience-content {
+    background: #b9bfd5;
+    padding: 35px;
+    width: 100%;
+}
+
+.experience-content > p {
+    font-size: clamp(18px, 1.5vw, 23px);
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 35px;
+}
+
+.experience-images {
+    background: #e9e9f0;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.experience-images img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+/* CONTACT */
+
+.contact-content {
+    width: 100%;
+    max-width: 850px;
+}
+
+.contact-content > p {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 40px 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.contact-item span {
+    color: #ed82a6;
+    font-size: 30px;
+}
+
+.contact-item p {
+    font-size: 21px;
+}
+
+/* FLECHAS */
+
+.arrows {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1001;
+}
+
+.arrows button {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #edcbd5;
+    color: #25232a;
+    font-size: 24px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.arrows button:hover {
+    background: #e68ca8;
+    transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: auto;
+        min-height: 70px;
+        padding: 15px 4%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .navbar nav a {
+        font-size: 11px;
+    }
+
+    .page {
+        padding: 125px 6% 65px;
+        min-height: 100svh;
+        height: auto;
+    }
+
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-content > img {
+        width: min(75vw, 350px);
+        height: 40vh;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card > img {
+        height: 35vh;
+    }
+
+    .experience-content {
+        padding: 15px;
+    }
+
+    .experience-images {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-images img {
+        height: 30vh;
+    }
+
+    .skills-list {
+        gap: 12px;
+    }
+}
